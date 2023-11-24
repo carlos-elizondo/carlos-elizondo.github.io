@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-QX9SDVLPL6"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-QX9SDVLPL6");
+        </script>
+        <!-- Do not crawl -->
+        <meta name="robots" content="noindex" />
+        <meta charset="UTF-8" />
+        <title>Scrabble</title>
+        <!-- Debugging -->
+        <script type="module" src="test.js" defer></script>
+        <script type="module" src="main.js" defer></script>
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body id="body">
+        <div id="board"></div>
+        <div id="controls">
+            <label for="word">Word: </label><input type="text" id="word" />
+            <label for="x">x: </label
+            ><input type="number" id="x" min="1" max="15" />
+            <label for="y">y: </label
+            ><input type="number" id="y" min="1" max="15" />
+            <select id="direction">
+                <option value="horizontal">Horizontal</option>
+                <option value="vertical">Vertical</option>
+            </select>
+            <input type="button" value="Play!" id="play" />
+            <input type="button" value="Reset" id="reset" />
+            <input type="button" value="Help!" id="help" />
+            <br />
+            <br />
+            <div id="rack"></div>
+            <div id="hint"></div>
+        </div>
+        <!-- <div id="rack"></div>
+        <div id="hint">Hello</div> -->
+    </body>
+</html>

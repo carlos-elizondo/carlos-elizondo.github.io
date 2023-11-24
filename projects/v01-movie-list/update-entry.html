@@ -1,0 +1,204 @@
+<!-- Include header -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CRUD Application</title>
+
+        <!-- Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- /Fonts -->
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <div class="container">
+                    <div class="text-center">
+                        <a href="main-movie-list.html" class="nav-brand text-dark">Movie List</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /Header -->
+    </body>
+</html>
+
+<!-- /Include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <a href="main-movie-list.html" class="border-shadow"
+                ><i class="fas fa-angle-double-left"></i>My Watch List</a
+            >
+        </div>
+        <div class="form-title text-center">
+            <h2>Update Entry</h2>
+            <span>Use the form to update the entry</span>
+        </div>
+        <!-- Add user form -->
+        <!-- Form handling -->
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<form method="post" id="update-entry">
+    <div class="new-entry">
+        <div class="form-group">
+            <label for="poster-image">Poster Image</label>
+            <input type="hidden" name="id" value="" />
+            <input
+                type="text"
+                name="posterImage"
+                id="posterImage"
+                value="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3rINdUPSy9AklJg74jWHOyUXuZd.jpg"
+                placeholder="url-image"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input
+                type="text"
+                id="title"
+                name="title"
+                value="Secret Invasion"
+                placeholder="Title"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="release-date">Release Date</label>
+            <input
+                type="text"
+                id="releaseDate"
+                name="releaseDate"
+                value="2023"
+                placeholder="Title"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="content-type">Content Type</label>
+            <div class="radio inline">
+                <input
+                    type="radio"
+                    id="radio-2"
+                    name="contentType"
+                    value="Movie"
+                    required
+                />
+                <label for="radio-2" class="radio-label">Movie</label>
+            </div>
+            <div class="radio inline">
+                <input
+                    type="radio"
+                    id="radio-3"
+                    name="contentType"
+                    value="TV Show"
+                />
+                <label for="radio-3" class="radio-label">TV Show</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" id="submit-btn" class="btn text-dark update">
+                Save
+            </button>
+        </div>
+    </div>
+</form>
+
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get("id");
+    const form = document.querySelector("form");
+    let request = {};
+    function checkForm(form) {
+        // get all the inputs within the submitted form
+        var inputs = form.getElementsByTagName("input");
+        for (var i = 0; i < inputs.length; i++) {
+            // only validate the inputs that have the required attribute
+            if (inputs[i].hasAttribute("required")) {
+                if (inputs[i].value == "") {
+                    // found an empty field that is required
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    document.getElementById("submit-btn").addEventListener("click", (event) => {
+        event.preventDefault();
+        const contentTypeChoices = document.getElementsByName("contentType");
+
+        // Check if contentType is selected
+        let contentTypeBool = false;
+        for (i = 0; i < contentTypeChoices.length; i++) {
+            if (contentTypeChoices[i].checked) {
+                contentTypeBool = true;
+            }
+        }
+        // Get form
+        const form = document.querySelector("form");
+
+        // Check if form has been filled out
+        if (checkForm(form) && contentTypeBool) {
+            // Get values from form
+            const posterImage = document.getElementById("posterImage").value;
+            const title = document.getElementById("title").value;
+            const releaseDate = document.getElementById("releaseDate").value;
+            const contentTypeChoices =
+                document.getElementsByName("contentType");
+            let contentType = "";
+            for (i = 0; i < contentTypeChoices.length; i++) {
+                if (contentTypeChoices[i].checked)
+                    // console.log("contentType: " + contentTypeChoices[i].value);
+                    contentType = contentTypeChoices[i].value;
+            }
+            // Create object for entry
+            const entryObject = {
+                id: id,
+                posterImage: posterImage,
+                title: title,
+                releaseDate: releaseDate,
+                contentType: contentType,
+            };
+            // Create request
+            request = {
+                url: `http://localhost:3000/api/entries/${entryObject.id}`,
+                method: "PUT",
+                data: entryObject,
+            };
+            // Send request
+            $.ajax(request).done(function (response) {
+                alert("Data Updated Successfully!");
+            });
+        } else {
+            alert("Please fill all required fields");
+        }
+    });
+</script>
+<!-- /Form handling -->
+
+        <!-- /Add user form -->
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- Include footer -->
+</body>
+</html>
+<!-- /Include footer -->

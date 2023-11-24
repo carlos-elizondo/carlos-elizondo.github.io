@@ -1,0 +1,143 @@
+<!-- Include header -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CRUD Application</title>
+
+        <!-- Fonts -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- /Fonts -->
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header">
+            <nav>
+                <div class="container">
+                    <div class="text-center">
+                        <a href="#" class="nav-brand text-dark">Movie List</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- /Header -->
+    </body>
+</html>
+
+<!-- /Include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <a href="add-entry.html" class="border-shadow">
+                <span class="text-gradient"
+                    >New Entry <i class="fa-solid fa-film"></i
+                ></span>
+            </a>
+        </div>
+        <!-- Form handling -->
+        <form action="/" method="post">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Poster Image</th>
+                        <th>Title</th>
+                        <th>Release Date</th>
+                        <th>Content Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+<tr>
+    <td>1</td>
+    <td><img class="poster-image" src=https://www.themoviedb.org/t/p/w600_and_h900_bestv2/3rINdUPSy9AklJg74jWHOyUXuZd.jpg></img></td>
+    <td>Secret Invasion</td>
+    <td>2023</td>
+    <td>Movie</td>
+    <td class="actions">
+        <a href="update-entry.html" class="btn border-shadow update"
+            ><i class="fas fa-pencil-alt"></i><span class="text-gradient"></span
+        ></a>
+        <a class="btn border-shadow delete" id="64af756583b7c74a157d95ff" onClick="reply_click(this.id)"
+            ><i class="fas fa-times"></i><span class="text-gradient"></span
+        ></a>
+    </td>
+</tr>
+ 
+<tr>
+    <td>2</td>
+    <td><img class="poster-image" src=https://www.themoviedb.org/t/p/w600_and_h900_bestv2/NNxYkU70HPurnNCSiCjYAmacwm.jpg></img></td>
+    <td>Mission: Impossible - Dead Reckoning Part One</td>
+    <td>07/12/2023</td>
+    <td>Movie</td>
+    <td class="actions">
+        <a href="update-entry.html" class="btn border-shadow update"
+            ><i class="fas fa-pencil-alt"></i><span class="text-gradient"></span
+        ></a>
+        <a class="btn border-shadow delete" id="64af755283b7c74a157d95fd" onClick="reply_click(this.id)"
+            ><i class="fas fa-times"></i><span class="text-gradient"></span
+        ></a>
+    </td>
+</tr>
+
+
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    // Using jQuery
+    let id;
+    // Getting the ID of the entry to be deleted
+    function reply_click(clicked_id) {
+        id = clicked_id;
+    }
+    // If the current page is the home page
+    if (window.location.pathname === "/") {
+        $onDelete = $(".table tbody td a.delete");
+        $onDelete.click(() => {
+            // Testing ID
+            console.log("ID: ", id);
+            // Request to be made to the server
+            const request = {
+                url: `http://localhost:3000/api/entries/${id}`,
+                method: "Delete",
+
+            }
+            // Confirming the deletion
+            if (confirm("Are you sure you want to delete this entry?")) {
+                // Making the request
+                $.ajax(request).done(function (response) {
+                    // Alerting the user
+                    alert("Data Deleted Successfully!");
+            });
+            // Reloading the page
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+            }
+        });
+    }
+</script>
+
+                </tbody>
+            </table>
+        </form>
+        <!-- /Form handling -->
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- Include footer -->
+</body>
+</html>
+<!-- /Include footer -->

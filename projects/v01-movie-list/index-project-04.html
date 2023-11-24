@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-QX9SDVLPL6"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-QX9SDVLPL6");
+    </script>
+    <head>
+        <title>Creating a modern CRUD Watchlist Web App</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+
+        <!-- Do not crawl -->
+        <meta name="robots" content="noindex" />
+
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <noscript
+            ><link rel="stylesheet" href="/assets/css/noscript.css"
+        /></noscript>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo">Carlos Elizondo</a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="/index.html">Home</a></li>
+                </ul>
+                <ul class="icons">
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/carlosaeg"
+                            class="icon brands fa-linkedin-in"
+                            ><span class="label">LinkedIn</span></a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/carlos-elizondo"
+                            class="icon brands fa-github"
+                            ><span class="label">GitHub</span></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <h1>Creating a modern CRUD Watchlist Web App</h1>
+                        <p>Created</p>
+                    </header>
+                    <div class="image main">
+                        <img src="/images/scrabble-big.png" alt="" />
+                    </div>
+                    <div>
+                        <h2>Description</h2>
+                        <p>
+                            GitHub Pages only host static pages, this is why for
+                            the implementation of the Scrabble game you see, it
+                            only contains the Scrabble interface. It does not
+                            contain the backend code that handles the game
+                            logic. This being the game score and the 2 player
+                            modality.
+                        </p>
+                        <p>
+                            This implementation does contain persistence which
+                            you will notice once you place a word on the board
+                            and then refresh the page. The word you place will
+                            still be there. This takes advantage of the
+                            browser's local storage.
+                        </p>
+                        <p>
+                            The board and the rack are programmatically created
+                            using JavaScript.
+                        </p>
+                        <p>
+                            The backend implementation uses Node.js and
+                            Express.js.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Instructions</h2>
+                        <ul>
+                            <li>
+                                Every player will start their turn by drawing
+                                seven tiles from the Scrabble bag.
+                            </li>
+                            <li>
+                                Blanks: The two blank <b>(*)</b> tiles may be
+                                used as any letters. When playing a blank, you
+                                must state which letter it represents. It
+                                remains that letter for the rest of the game.
+                            </li>
+                            <li>
+                                When looking at the board, players will see that
+                                some squares offer multipliers. Should a tile be
+                                placed on these squares, the value of the tile
+                                will be multiplied by 2x <b>(cyan)</b> or 3x
+                                <b>(blue)</b>. Some squares will also multiply
+                                the total value of the word by 2x
+                                <b>(pink)</b> or 3x <b>(red)</b> and not just
+                                the single point value of one tile.
+                            </li>
+                            <li>
+                                You can place a word horizontally or vertically.
+                            </li>
+                            <li>
+                                Use the <b>x and y</b> coordinates to choose
+                                where to place the word coordinates start from 1
+                                to 15. .
+                            </li>
+                            <li>
+                                Use the <b>drop-down</b> menu to choose
+                                placement orientation.
+                            </li>
+                            <li>
+                                Use the <b>play</b> button to place the word.
+                            </li>
+                            <li>
+                                Use the <b>reset</b> button to start a new game.
+                            </li>
+                            <li>
+                                Use the <b>help</b> button to get a word
+                                suggestion from your current tiles.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resizer ugly">
+                        <iframe
+                            class="resized"
+                            src="main-movie-list.html"
+                            height="900"
+                        ></iframe>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer id="footer">
+                <section class="split contact">
+                    <section>
+                        <h3>Social</h3>
+                        <ul class="icons alt">
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/in/carlosaeg"
+                                    class="icon brands fa-linkedin-in"
+                                    ><span class="label">LinkedIn</span></a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/carlos-elizondo"
+                                    class="icon brands alt fa-github"
+                                    ><span class="label">GitHub</span></a
+                                >
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Carlos Elizondo</li>
+                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
