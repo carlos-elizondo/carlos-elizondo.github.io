@@ -2,9 +2,23 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-QX9SDVLPL6"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-QX9SDVLPL6");
+    </script>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CRUD Application</title>
+        <title>CRUD Watchlist</title>
 
         <!-- Fonts -->
         <link
@@ -25,7 +39,7 @@
             <nav>
                 <div class="container">
                     <div class="text-center">
-                        <a href="main-movie-list.html" class="nav-brand text-dark">Movie List</a>
+                        <a href="main-movie-list.html" class="nav-brand text-dark">Watchlist</a>
                     </div>
                 </div>
             </nav>

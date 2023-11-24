@@ -5,21 +5,21 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-    <!-- Google tag (gtag.js) -->
-    <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-QX9SDVLPL6"
-    ></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-
-        gtag("config", "G-QX9SDVLPL6");
-    </script>
     <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-QX9SDVLPL6"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-QX9SDVLPL6");
+        </script>
         <title>Creating a modern CRUD Watchlist Web App</title>
         <meta charset="utf-8" />
         <meta
@@ -72,7 +72,10 @@
                 <section class="post">
                     <header class="major">
                         <h1>Creating a modern CRUD Watchlist Web App</h1>
-                        <p>Created</p>
+                        <p>
+                            In this project I designed a CRUD Web App watchlist
+                            with a MongoDB database.
+                        </p>
                     </header>
                     <div class="image main">
                         <img src="/images/scrabble-big.png" alt="" />
@@ -81,26 +84,85 @@
                         <h2>Description</h2>
                         <p>
                             GitHub Pages only host static pages, this is why for
-                            the implementation of the Scrabble game you see, it
-                            only contains the Scrabble interface. It does not
-                            contain the backend code that handles the game
-                            logic. This being the game score and the 2 player
-                            modality.
+                            the implementation you are about to see you will not
+                            be able to add, edit, or delete an entry because it
+                            is not connected to a database.
                         </p>
                         <p>
-                            This implementation does contain persistence which
-                            you will notice once you place a word on the board
-                            and then refresh the page. The word you place will
-                            still be there. This takes advantage of the
-                            browser's local storage.
+                            Create, Read, Update, and Delete (CRUD) are the four
+                            basic functions to be considered when building APIs
+                            and that the models should be able to do.
                         </p>
                         <p>
-                            The board and the rack are programmatically created
-                            using JavaScript.
+                            In a REST environment these basic functions
+                            corresponds to the HTTP methods POST, GET, PUT, and
+                            DELETE.
                         </p>
                         <p>
-                            The backend implementation uses Node.js and
-                            Express.js.
+                            For this project I used various JavaScript libraries
+                            with Node.js:
+                        </p>
+                        <ul>
+                            <li>
+                                I used <b>Axios</b> to make HTTP requests from
+                                node.js which supports the Promise API that is
+                                native to JS ES6.
+                            </li>
+                            <li>
+                                I used <b>EJS</b> (Embedded JavaScript
+                                Templating) which is one of the most popular
+                                template engines for JavaScript. Which can be
+                                used to embed JavaScript code in a template
+                                language that is then used to generate HTML.
+                            </li>
+                            <li>
+                                I used <b>Express</b> which is a minimal and
+                                flexible Node.js web application framework for
+                                building RESTful APIs with Node.js that provides
+                                a robust set of features for web and mobile
+                                applications.
+                            </li>
+                            <li>
+                                I used <b>Mongoose</b>, an Object Data Modeling
+                                (ODM) library for MongoDB to manage my database.
+                            </li>
+                        </ul>
+                        <p>
+                            On the homepage, the watchlist connects to the
+                            database and displays (<b>reads</b>) the movies or
+                            TV shows you have added to it. Here we can see that
+                            our database contains two entries: “Mission:
+                            Impossible - Dead Reckoning Part One” and Secret
+                            Invasion. Each entry has an ID, Poster Image, Title,
+                            Release Date, and Content Type associated with it.
+                        </p>
+                        <p>
+                            If you want to add (<b>create</b>) a new entry there
+                            is a button on the left-top corner of the interface
+                            that says “New Entry” once you click that button you
+                            will be able to add a new entry by providing the 4
+                            pieces of information each entry has to have. Once
+                            you click the save button it would send this
+                            information to the MongoDB database.
+                        </p>
+                        <p>
+                            You can also edit (<b>update</b>) an entry, for
+                            example, “Secret Invasion” which is not a movie but
+                            a TV show to do this you would click on the “pencil”
+                            button corresponding to that entry and this would
+                            grab the information associated with that entry so
+                            that you could easily edit any field. Now in this
+                            example, we could change the content type to “TV
+                            Show” and click save and if it was connected to the
+                            database it would edit this entry and update it.
+                            Because it is not connected to the database the
+                            content type for “Secret Invasion” remains a movie.
+                        </p>
+                        <p>
+                            If you wanted to <b>delete</b> any entry you would
+                            only need to click on the “delete” button below the
+                            edit button and this would delete the entry from the
+                            database.
                         </p>
                     </div>
                     <div>
@@ -149,6 +211,7 @@
                                 suggestion from your current tiles.
                             </li>
                         </ul>
+                        <p></p>
                     </div>
                     <div class="resizer ugly">
                         <iframe
