@@ -26,6 +26,14 @@
     border: 4px dashed black; */
 }
 
+.tagColor {
+    text-align: center;
+    color: #18bfef;
+    text-transform: uppercase;
+    /* font-weight: bold; */
+    /* border: solid; */
+}
+
 html,
 body,
 div,
