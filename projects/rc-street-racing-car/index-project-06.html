@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-QX9SDVLPL6"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-QX9SDVLPL6");
+        </script>
+        <title>
+            From Concept to Curb: Designing and building a Bluetooth-Controlled
+            RC Street Racing Car
+        </title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+
+        <!-- Do not crawl -->
+        <meta name="robots" content="noindex" />
+
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <noscript
+            ><link rel="stylesheet" href="/assets/css/noscript.css"
+        /></noscript>
+    </head>
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Header -->
+            <header id="header">
+                <a href="/index.html" class="logo">Carlos Elizondo</a>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="/index.html">Home</a></li>
+                </ul>
+                <ul class="icons">
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/carlosaeg"
+                            class="icon brands fa-linkedin-in"
+                            ><span class="label">LinkedIn</span></a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://github.com/carlos-elizondo"
+                            class="icon brands fa-github"
+                            ><span class="label">GitHub</span></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <h1>
+                            From Concept to Curb: Designing and building a
+                            Bluetooth-Controlled RC Street Racing Car
+                        </h1>
+                        <p>
+                            In this semester-long project, I was part of a
+                            two-person team. We explored Bluetooth connectivity
+                            with a controller and receiver by creating an
+                            intuitive controller and a 3D printed street racing
+                            car.
+                        </p>
+                    </header>
+                    <div class="image main">
+                        <img
+                            src="/images/rc-street-racing-car-big.png"
+                            alt=""
+                        />
+                    </div>
+                    <div>
+                        <h2>Description</h2>
+                        <p>
+                            It was a challenging and rewarding project to work
+                            on. We were learning about the concepts at the same
+                            time we were designing and building it. There were
+                            many iterations for the controller and for building
+                            the car. However, it all started with the design. We
+                            knew that there were two integral parts for the
+                            whole idea to come together: the controller and the
+                            receiver. I was mainly in charge of getting all the
+                            components for both the controller and the car. Once
+                            this was done I was tasked to develop and 3D print
+                            the frame of the car and assemble it. In addition,
+                            because we only had one breadboard for the
+                            controller I created Jumper Connectors for the car.
+                            Creating and documenting all the connections that
+                            were needed for the car to function.
+                        </p>
+                        <div class="box alt">
+                            <div class="row gtr-50 gtr-uniform">
+                                <div class="col-4">
+                                    <span class="image fit"
+                                        ><img
+                                            src="/images/Arduino Pro Mini - Connections -1.png"
+                                            alt=""
+                                    /></span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit"
+                                        ><img
+                                            src="/images/Arduino Pro Mini - Connections-2.png"
+                                            alt=""
+                                    /></span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit"
+                                        ><img
+                                            src="/images/Arduino Pro Mini - Connections-3.png"
+                                            alt=""
+                                    /></span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="image fit"
+                                        ><img
+                                            src="/images/Arduino Pro Mini - Connections-4.png"
+                                            alt=""
+                                    /></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Components</h2>
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Components for the controller</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 Arduino Nano 33 BLE board</td>
+                                </tr>
+                                <tr>
+                                    <td>1 single-color-LED bar graph</td>
+                                </tr>
+                                <tr>
+                                    <td>1 RGB LED</td>
+                                </tr>
+                                <tr>
+                                    <td>1 pressure pad (+ 1 capacitor)</td>
+                                </tr>
+                                <tr>
+                                    <td>1 button</td>
+                                </tr>
+                                <tr>
+                                    <td>1 Breadboard</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-wrapper">
+                        <table class="alt">
+                            <thead>
+                                <tr>
+                                    <th>Components for the car</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 Arduino Pro Mini (5V/16MHz) board</td>
+                                </tr>
+                                <tr>
+                                    <td>1 DC Motor</td>
+                                </tr>
+                                <tr>
+                                    <td>1 Hitec HS-53 servo</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        1 SparkFun Motor Driver - Dual TB6612FNG
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        1 DSD TECH HM-18 CC2640R2F Bluetooth 5.0
+                                        BLE Module
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2 AA Battery Cases</td>
+                                </tr>
+                                <tr>
+                                    <td>1 9.0 voltage battery clip</td>
+                                </tr>
+                                <tr>
+                                    <td>1 3D Printer</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <h2>The controller</h2>
+                        <p>
+                            We wanted the controller to be very intuitive for
+                            the user from the get-go. This is why we placed our
+                            Arduino Nano 33 BLE on a breadboard and we used the
+                            gyroscope information to determine the direction of
+                            the car, this way the user could be holding the
+                            breadboard as a wheel to control the car. The next
+                            thing we did was to use a pressure pad to simulate
+                            the acceleration from a pedal in a car, and used an
+                            LED bar graph as feedback so that the user could see
+                            how fast they were going by looking at how many
+                            lights on the bar graph were turned on, the more
+                            lights the faster the car was going. And finally we
+                            used a button and a single RGB LED light to indicate
+                            if the car was on or off.
+                        </p>
+                        <div class="image fit">
+                            <img
+                                src="/images/rc-street-racing-controller.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <h2>The car & receiver</h2>
+                        <p>
+                            As for the car itself, we 3D printed all of the
+                            pieces and assembled them to accommodate the
+                            components. Because the Arduino Pro mini did not
+                            possess an inbuilt Bluetooth module such as the
+                            Arduino Nano 33 BLE board we had to connect an
+                            external module, this way information could be
+                            received from the controller. To manage the DC
+                            motor, for propulsion, and the servo for the
+                            direction we used a dual-motor driver. We used the
+                            AA battery cases to power the Arduino Pro Mini board
+                            and a 9.0 battery clip to power the servo and the DC
+                            motor.
+                        </p>
+                        <div class="image fit">
+                            <img
+                                src="/images/rc-street-racing-car-side-view.png"
+                                alt=""
+                            />
+                            <img
+                                src="/images/rc-street-racing-car-top-view.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <h2>Instructions</h2>
+                        <ol>
+                            <li>
+                                Power on both the car and the controller. You
+                                should see the car's flashing light.
+                            </li>
+                            <li>
+                                When the car's LED stops blinking, and the
+                                controller's LED is green, you can start
+                                driving:
+                            </li>
+                            <ol>
+                                <li>To speed up, press on the pressure pad</li>
+                                <li>
+                                    To turn left or right, tilt the controller
+                                    left or right
+                                </li>
+                                <li>
+                                    To stop, click the stop button. The
+                                    controller's LED should be red
+                                </li>
+                                <li>
+                                    To start, click the stop button again. The
+                                    controller LED should be green
+                                </li>
+                            </ol>
+                            <li>
+                                If the controller stops showing lights, redo
+                                from step 1
+                            </li>
+                        </ol>
+                        <div class="image fit">
+                            <img
+                                src="/images/rc-street-racing-car-demo.gif"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <h2>What we learned</h2>
+                        <p>
+                            Building an idea is an iterative process. We started
+                            modifying the base 3D model in slicer files to fit
+                            in our motor and servo. We then assembled the
+                            Arduino Pro Mini, the TB6612FNG H-bridge Motor
+                            Driver, and the HM-18 Bluetooth module and later
+                            designed a flexible schematic to keep track of the
+                            wiring and update in case of needs. On the software
+                            side, we programmed and tested the logic of the
+                            boards that communicate via Bluetooth, the Arduino
+                            Pro Mini, and the Arduino Nano 33 BLE Sense, which
+                            was challenging due to the required correct voltage,
+                            Bluetooth unreliability, and on-board pins
+                            limitation. Overall, two key challenges and
+                            takeaways are Bluetooth connection (reliable
+                            communication between a controller and a receiver)
+                            and hardware debugging (such as testing that all the
+                            wires pass electricity, proper grounding, etc.)
+                        </p>
+                    </div>
+                    <h3>References</h3>
+                    <blockquote>
+                        <p>
+                            We used DIY RC Street Racing Car V2 by
+                            Banana_Science from Thingiverse repository as we
+                            found this 3D print would be a good starting point
+                            for us.
+                            <a href="https://www.thingiverse.com/thing:3685946"
+                                >(https://www.thingiverse.com/thing:3685946).</a
+                            >
+                        </p>
+                    </blockquote>
+                </section>
+            </div>
+            <!-- Footer -->
+            <footer id="footer">
+                <section class="split contact">
+                    <section>
+                        <h3>Social</h3>
+                        <ul class="icons alt">
+                            <li>
+                                <a
+                                    href="https://www.linkedin.com/in/carlosaeg"
+                                    class="icon brands fa-linkedin-in"
+                                    ><span class="label">LinkedIn</span></a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://github.com/carlos-elizondo"
+                                    class="icon brands alt fa-github"
+                                    ><span class="label">GitHub</span></a
+                                >
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </footer>
+
+            <!-- Copyright -->
+            <div id="copyright">
+                <ul>
+                    <li>&copy; Carlos Elizondo</li>
+                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
