@@ -26,6 +26,14 @@
     border: 4px dashed black; */
 }
 
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 50%;
+}
+
 .tagColor {
     text-align: center;
     color: #18bfef;
